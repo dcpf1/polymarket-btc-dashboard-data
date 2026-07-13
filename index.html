@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>POLY&middot;BTC — Public Ledger</title>
+<style>
+  :root{
+    --bg:#03100a; --panel:#071a0e; --border:#0f2a18; --text:#c8f0d8;
+    --green:#22d3a4; --red:#f5556d; --amber:#f5a623; --muted:#3d6b4d;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-size:14px; line-height:1.45; padding:16px; max-width:1080px; margin:0 auto;
+  }
+  a{color:var(--green)}
+  header{
+    display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;
+    padding-bottom:14px; border-bottom:1px solid var(--border); margin-bottom:16px;
+  }
+  h1{font-size:18px; margin:0; letter-spacing:.5px}
+  h1 .tick{color:var(--green)}
+  .badge{
+    font-size:11px; font-weight:700; letter-spacing:.6px; padding:3px 8px;
+    border-radius:4px; border:1px solid var(--amber); color:var(--amber);
+    text-transform:uppercase;
+  }
+  .updated{color:var(--muted); font-size:12px; margin-left:auto}
+  .stale{color:var(--amber)}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+  .panel{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:8px; padding:14px 16px;
+  }
+  .panel h2{
+    font-size:12px; text-transform:uppercase; letter-spacing:1px;
+    color:var(--muted); margin:0 0 10px;
+  }
+  .span2{grid-column:1 / -1}
+  .big{font-size:34px; font-weight:700; letter-spacing:.5px}
+  .sub{font-size:15px; margin-top:2px}
+  .pos{color:var(--green)} .neg{color:var(--red)} .mut{color:var(--muted)}
+  .row{display:flex; justify-content:space-between; gap:10px; margin:4px 0}
+  .bar{height:10px; border-radius:5px; background:var(--border); overflow:hidden; margin:10px 0 4px; display:flex}
+  .bar .cash{background:var(--green)} .bar .dep{background:var(--amber)}
+  canvas{width:100%; height:150px; display:block; margin-top:10px}
+  table{width:100%; border-collapse:collapse; font-size:13px}
+  th,td{text-align:right; padding:6px 6px; border-bottom:1px solid var(--border); white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--muted); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.5px}
+  .chip{font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px}
+  .chip.up{background:rgba(34,211,164,.16); color:var(--green)}
+  .chip.down{background:rgba(245,85,109,.16); color:var(--red)}
+  .tag{font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px}
+  .tag.win{background:rgba(34,211,164,.16); color:var(--green)}
+  .tag.loss{background:rgba(245,85,109,.16); color:var(--red)}
+  .tag.void{background:rgba(61,107,77,.18); color:var(--muted)}
+  tr.voidrow td{color:var(--muted)}
+  .perf-grid,.mon-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
+  .stat{border:1px solid var(--border); border-radius:6px; padding:10px 12px}
+  .stat .k{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px}
+  .stat .v{font-size:20px; font-weight:700; margin-top:3px}
+  .dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle}
+  .dot.green{background:var(--green)} .dot.amber{background:var(--amber)} .dot.red{background:var(--red)}
+  .card{border:1px solid var(--border); border-radius:6px; padding:10px 12px}
+  .card .name{font-size:12px; color:var(--text); font-weight:700; text-transform:capitalize}
+  .card .line{display:flex; justify-content:space-between; font-size:12px; margin-top:5px; color:var(--muted)}
+  .card .line b{color:var(--text); font-weight:600}
+  .shadowonly{font-size:10px; color:var(--amber); margin-left:5px}
+  .empty{color:var(--muted); font-style:italic; padding:8px 0}
+  footer{color:var(--muted); font-size:11px; text-align:center; margin-top:20px; padding-top:12px; border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<header>
+  <h1>POLY<span class="tick">&middot;</span>BTC — Public Ledger</h1>
+  <span class="badge">Paper / No Live Orders</span>
+  <span class="updated" id="updated">Loading&hellip;</span>
+</header>
+
+<div class="grid">
+  <section class="panel span2" id="p-portfolio">
+    <h2>Portfolio Value</h2>
+    <div class="big" id="pv-current">—</div>
+    <div class="sub" id="pv-pnl">&nbsp;</div>
+    <div class="bar" id="pv-bar"><span class="cash" style="width:100%"></span></div>
+    <div class="row" style="font-size:12px">
+      <span class="mut">Cash <b id="pv-cash" style="color:var(--green)">—</b></span>
+      <span class="mut">Deployed <b id="pv-dep" style="color:var(--amber)">—</b></span>
+      <span class="mut">Peak <b id="pv-peak" style="color:var(--text)">—</b></span>
+    </div>
+    <canvas id="equity" width="1000" height="150"></canvas>
+  </section>
+
+  <section class="panel" id="p-perf">
+    <h2><span class="dot" id="perf-dot"></span>Performance <span class="mut" style="font-size:11px">(BTC live-sized)</span></h2>
+    <div class="perf-grid" id="perf-grid"></div>
+  </section>
+
+  <section class="panel" id="p-monitor">
+    <h2>Coin Stats</h2>
+    <div class="mon-grid" id="coin-grid"></div>
+  </section>
+
+  <section class="panel span2" id="p-open">
+    <h2>Open Positions</h2>
+    <div id="open-wrap"></div>
+  </section>
+
+  <section class="panel span2" id="p-resolved">
+    <h2>Recent Resolved</h2>
+    <div id="resolved-wrap"></div>
+  </section>
+
+  <section class="panel span2" id="p-strategy">
+    <h2>Strategy Monitor <span class="mut" style="font-size:11px">(read-only, other paper strategies)</span></h2>
+    <div class="mon-grid" id="strategy-grid"></div>
+  </section>
+</div>
+
+<footer>
+  Simulated $150 portfolio following the Stickiness edge. Paper trading only — no
+  real capital, no live orders. Auto-refreshes every 60s.
+</footer>
+
+<script>
+"use strict";
+// index.html is served from the same GitHub-Pages site as the JSON, so relative
+// paths resolve correctly; the cache-buster defeats the Pages CDN's ~10-min cache.
+const DATA_URL = "dashboard_data.json";
+const HIST_URL = "balance_history.json";
+const REFRESH_MS = 60000;
+
+let lastData = null;         // last good dashboard_data
+let lastFetchMs = 0;         // wall-clock of the last successful fetch (for countdown)
+
+const $ = (id) => document.getElementById(id);
+const money = (v) => (v < 0 ? "-$" : "$") + Math.abs(Number(v || 0)).toFixed(2);
+const signMoney = (v) => (v >= 0 ? "+" : "-") + "$" + Math.abs(Number(v || 0)).toFixed(2);
+const pct = (v) => Number(v || 0).toFixed(2) + "%";
+const cls = (v) => (v > 0 ? "pos" : v < 0 ? "neg" : "mut");
+
+async function fetchJSON(url){
+  const r = await fetch(url + "?t=" + Date.now(), {cache:"no-store"});
+  if(!r.ok) throw new Error(url + " " + r.status);
+  return r.json();
+}
+
+async function fetchAll(){
+  try{
+    const [data, hist] = await Promise.all([fetchJSON(DATA_URL), fetchJSON(HIST_URL)]);
+    lastData = data; lastFetchMs = Date.now();
+    render(data, Array.isArray(hist) ? hist : []);
+    setUpdated(data.generated_at, false);
+  }catch(err){
+    // keep last good render; flag staleness
+    if(lastData) setUpdated(lastData.generated_at, true);
+    else $("updated").textContent = "No data yet — waiting for first publish…";
+    console.warn("fetch failed:", err.message);
+  }
+}
+
+function setUpdated(iso, stale){
+  const el = $("updated");
+  const t = iso ? new Date(iso) : null;
+  const when = t ? t.toLocaleString() : "unknown";
+  el.textContent = (stale ? "STALE — last good " : "Updated ") + when;
+  el.className = "updated" + (stale ? " stale" : "");
+}
+
+function render(d, hist){
+  renderPortfolio(d.balance || {}, hist);
+  renderPerf(d.perf || {});
+  renderCoins(d.coin_stats || {});
+  renderOpen(d.open_positions || []);
+  renderResolved(d.recent_resolved || []);
+  renderStrategies(d.strategy_stats || {});
+}
+
+function renderPortfolio(b, hist){
+  $("pv-current").textContent = money(b.current);
+  const pnl = Number(b.pnl_usd || 0);
+  const pe = $("pv-pnl");
+  pe.textContent = signMoney(pnl) + "  (" + (pnl>=0?"+":"") + pct(b.pnl_pct) + ")  vs $" + Number(b.starting||150).toFixed(0);
+  pe.className = "sub " + (pnl>=0 ? "pos" : "neg");
+  $("pv-cash").textContent = money(b.cash);
+  $("pv-dep").textContent = money(b.deployed);
+  $("pv-peak").textContent = money(b.peak);
+  const cash = Number(b.cash||0), dep = Number(b.deployed||0), tot = Math.max(cash+dep, 1e-9);
+  $("pv-bar").innerHTML =
+    '<span class="cash" style="width:'+(100*cash/tot)+'%"></span>' +
+    '<span class="dep" style="width:'+(100*dep/tot)+'%"></span>';
+  drawEquity(hist, Number(b.starting||150));
+}
+
+function drawEquity(hist, starting){
+  const cv = $("equity"), ctx = cv.getContext("2d");
+  const W = cv.width, H = cv.height, pad = 6;
+  ctx.clearRect(0,0,W,H);
+  const pts = hist.map(p => Number(p.balance)).filter(v => v===v);
+  if(pts.length < 2){
+    ctx.fillStyle = "#3d6b4d"; ctx.font = "13px monospace";
+    ctx.fillText("charting equity once history accrues…", 10, H/2);
+    return;
+  }
+  let lo = Math.min(starting, ...pts), hi = Math.max(starting, ...pts);
+  if(hi - lo < 1e-6){ hi += 1; lo -= 1; }
+  const x = (i) => pad + (W-2*pad) * i / (pts.length-1);
+  const y = (v) => pad + (H-2*pad) * (1 - (v-lo)/(hi-lo));
+  // starting baseline
+  ctx.strokeStyle = "#0f2a18"; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(pad, y(starting)); ctx.lineTo(W-pad, y(starting)); ctx.stroke();
+  ctx.setLineDash([]);
+  // equity line, colored by end vs start
+  const up = pts[pts.length-1] >= starting;
+  ctx.strokeStyle = up ? "#22d3a4" : "#f5556d"; ctx.lineWidth = 2;
+  ctx.beginPath();
+  pts.forEach((v,i) => { const px=x(i), py=y(v); i?ctx.lineTo(px,py):ctx.moveTo(px,py); });
+  ctx.stroke();
+}
+
+function renderPerf(p){
+  const status = p.status || "red";
+  $("perf-dot").className = "dot " + status;
+  const cards = [
+    ["Win Rate", p.n ? (100*Number(p.win_rate||0)).toFixed(1)+"%" : "—"],
+    ["Avg PnL / Trade", p.n ? signMoney(p.avg_pnl_per_trade) : "—"],
+    ["Trades", String(p.n||0)],
+    ["Cap-Bind Rate", p.n ? (100*Number(p.cap_bind_rate||0)).toFixed(0)+"%" : "—"],
+  ];
+  $("perf-grid").innerHTML = p.n===0 && (p.status==="red")
+    ? '<div class="empty span2">No resolved trades yet.</div>' + cards.map(statHTML).join("")
+    : cards.map(statHTML).join("");
+}
+function statHTML([k,v]){ return '<div class="stat"><div class="k">'+k+'</div><div class="v">'+v+'</div></div>'; }
+
+function renderCoins(cs){
+  const keys = ["btc","eth"];
+  $("coin-grid").innerHTML = keys.map(c => {
+    const s = cs[c] || {n:0,win_rate:0,total_pnl:0};
+    const so = c==="eth" ? '<span class="shadowonly">shadow-only</span>' : '';
+    return '<div class="card"><div class="name">'+c.toUpperCase()+so+'</div>'+
+      '<div class="line">Trades <b>'+(s.n||0)+'</b></div>'+
+      '<div class="line">Win rate <b>'+(s.n?(100*s.win_rate).toFixed(0)+'%':'—')+'</b></div>'+
+      '<div class="line">Total PnL <b class="'+cls(s.total_pnl)+'">'+signMoney(s.total_pnl)+'</b></div></div>';
+  }).join("");
+}
+
+function renderOpen(list){
+  const wrap = $("open-wrap");
+  if(!list.length){ wrap.innerHTML = '<div class="empty">No open positions right now.</div>'; return; }
+  const head = '<tr><th>Coin</th><th>Side</th><th>Fill</th><th>Now</th><th>EV%</th><th>Unreal.</th><th>Resolves in</th></tr>';
+  const rows = list.map((p,i) => {
+    const chip = p.side==="Up" ? '<span class="chip up">UP</span>' : '<span class="chip down">DOWN</span>';
+    const so = p.live_sized===false ? ' <span class="shadowonly">eth</span>' : '';
+    return '<tr>'+
+      '<td>'+String(p.coin||'').toUpperCase()+so+'</td>'+
+      '<td>'+chip+'</td>'+
+      '<td>'+Number(p.avg_fill||0).toFixed(3)+'</td>'+
+      '<td>'+Number(p.current_p||0).toFixed(3)+'</td>'+
+      '<td class="'+cls(p.ev_pct)+'">'+Number(p.ev_pct||0).toFixed(1)+'</td>'+
+      '<td class="'+cls(p.unrealized_pnl)+'">'+signMoney(p.unrealized_pnl)+'</td>'+
+      '<td class="cd" data-secs="'+Number(p.seconds_left||0)+'">—</td>'+
+    '</tr>';
+  }).join("");
+  wrap.innerHTML = '<table>'+head+rows+'</table>';
+  tickCountdowns();
+}
+
+function renderResolved(list){
+  const wrap = $("resolved-wrap");
+  if(!list.length){ wrap.innerHTML = '<div class="empty">No resolved trades yet.</div>'; return; }
+  const head = '<tr><th>Time</th><th>Coin</th><th>Side</th><th>Fill</th><th>Result</th><th>PnL</th></tr>';
+  const rows = list.map(r => {
+    const isVoid = r.correct === null || r.note === "void";
+    const tag = isVoid ? '<span class="tag void">VOID</span>'
+      : (r.correct ? '<span class="tag win">WIN</span>' : '<span class="tag loss">LOSS</span>');
+    const chip = r.side==="Up" ? '<span class="chip up">UP</span>' : '<span class="chip down">DOWN</span>';
+    const t = r.ts ? new Date(r.ts).toLocaleTimeString() : '—';
+    return '<tr class="'+(isVoid?'voidrow':'')+'">'+
+      '<td>'+t+'</td>'+
+      '<td>'+String(r.coin||'').toUpperCase()+'</td>'+
+      '<td>'+chip+'</td>'+
+      '<td>'+Number(r.entry||0).toFixed(3)+'</td>'+
+      '<td>'+tag+'</td>'+
+      '<td class="'+(isVoid?'mut':cls(r.pnl))+'">'+signMoney(r.pnl)+'</td>'+
+    '</tr>';
+  }).join("");
+  wrap.innerHTML = '<table>'+head+rows+'</table>';
+}
+
+function renderStrategies(ss){
+  const order = [["stickiness","Stickiness"],["cross_coin","Cross-Coin"],
+                 ["london","London Fade"],["near_certainty_arb","Near-Cert Arb"]];
+  $("strategy-grid").innerHTML = order.map(([k,label]) => {
+    const s = ss[k] || {n:0,win_rate:0,total_pnl:0};
+    return '<div class="card"><div class="name">'+label+'</div>'+
+      '<div class="line">Trades <b>'+(s.n||0)+'</b></div>'+
+      '<div class="line">Win rate <b>'+(s.n?(100*s.win_rate).toFixed(0)+'%':'—')+'</b></div>'+
+      '<div class="line">Total PnL <b class="'+cls(s.total_pnl)+'">'+signMoney(s.total_pnl)+'</b></div></div>';
+  }).join("");
+}
+
+// Client-side countdown: decrement each open position's "resolves in" every second
+// off the seconds_left captured at fetch time.
+function tickCountdowns(){
+  const elapsed = (Date.now() - lastFetchMs)/1000;
+  document.querySelectorAll(".cd").forEach(td => {
+    const base = Number(td.getAttribute("data-secs")||0);
+    let s = Math.max(0, base - elapsed);
+    if(s <= 0){ td.textContent = "resolving…"; td.className = "cd mut"; return; }
+    const m = Math.floor(s/60), sec = Math.floor(s%60);
+    td.textContent = m + ":" + String(sec).padStart(2,"0");
+  });
+}
+
+setInterval(tickCountdowns, 1000);
+setInterval(fetchAll, REFRESH_MS);
+fetchAll();
+</script>
+</body>
+</html>
