@@ -1,47 +1,39 @@
 {
-  "generated_at": "2026-07-14T12:45:10.393122+00:00",
+  "generated_at": "2026-07-14T12:46:24.266908+00:00",
   "balance": {
-    "current": 129.7761,
-    "cash": 104.748,
-    "deployed": 22.5,
-    "unrealized": 2.5281,
+    "current": 129.7769,
+    "cash": 129.7769,
+    "deployed": 0,
+    "unrealized": 0,
     "starting": 150.0,
     "peak": 150.0,
-    "pnl_usd": -20.2239,
-    "pnl_pct": -13.4826
+    "pnl_usd": -20.2231,
+    "pnl_pct": -13.4821
   },
   "trades": {
-    "total": 1,
-    "wins": 0,
+    "total": 2,
+    "wins": 1,
     "losses": 1,
-    "total_pnl": -22.752
+    "total_pnl": -20.2231
   },
   "perf": {
-    "win_rate": 0.0,
-    "avg_pnl_per_trade": -22.752,
-    "n": 1,
+    "win_rate": 0.5,
+    "avg_pnl_per_trade": -10.1115,
+    "n": 2,
     "cap_bind_rate": 1.0,
     "status": "red"
   },
-  "open_positions": [
-    {
-      "coin": "btc",
-      "slug": "btc-updown-5m-1784032800",
-      "side": "Up",
-      "entry_price": 0.88,
-      "avg_fill": 0.89,
-      "shares": 25.280899,
-      "cost": 22.5,
-      "current_p": 0.99,
-      "model_p": 0.9465268034119507,
-      "ev_pct": 6.3513,
-      "opened_at": "2026-07-14T12:43:52.643005+00:00",
-      "seconds_left": 19.6,
-      "unrealized_pnl": 2.5281,
-      "live_sized": true
-    }
-  ],
+  "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-07-14T12:45:43.867120+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.89,
+      "correct": true,
+      "pnl": 2.5289,
+      "note": ""
+    },
     {
       "ts": "2026-07-14T12:41:06.899856+00:00",
       "coin": "btc",
@@ -54,9 +46,9 @@
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 214,
-      "win_rate": 0.9252,
-      "total_pnl": 59.0286
+      "n": 215,
+      "win_rate": 0.9256,
+      "total_pnl": 60.1526
     },
     "cross_coin": {
       "n": 90,
@@ -76,9 +68,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 1,
-      "win_rate": 0.0,
-      "total_pnl": -22.752
+      "n": 2,
+      "win_rate": 0.5,
+      "total_pnl": -20.2231
     },
     "eth": {
       "n": 0,
