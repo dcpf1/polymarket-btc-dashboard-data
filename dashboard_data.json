@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-07-14T12:22:25.283434+00:00",
+  "balance": {
+    "current": 150.0,
+    "cash": 150.0,
+    "deployed": 0,
+    "unrealized": 0,
+    "starting": 150.0,
+    "peak": 150.0,
+    "pnl_usd": 0.0,
+    "pnl_pct": 0.0
+  },
+  "trades": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "total_pnl": 0.0
+  },
+  "perf": {
+    "win_rate": 0.0,
+    "avg_pnl_per_trade": 0.0,
+    "n": 0,
+    "cap_bind_rate": 0.0,
+    "status": "red"
+  },
+  "open_positions": [],
+  "recent_resolved": [],
+  "strategy_stats": {
+    "stickiness": {
+      "n": 213,
+      "win_rate": 0.9296,
+      "total_pnl": 69.1406
+    },
+    "cross_coin": {
+      "n": 90,
+      "win_rate": 0.4556,
+      "total_pnl": -102.9847
+    },
+    "london": {
+      "n": 29,
+      "win_rate": 0.4828,
+      "total_pnl": -11.8913
+    },
+    "near_certainty_arb": {
+      "n": 0,
+      "win_rate": 0.0,
+      "total_pnl": 0.0
+    }
+  },
+  "coin_stats": {
+    "btc": {
+      "n": 0,
+      "win_rate": 0.0,
+      "total_pnl": 0.0
+    },
+    "eth": {
+      "n": 0,
+      "win_rate": 0.0,
+      "total_pnl": 0.0
+    }
+  }
+}
