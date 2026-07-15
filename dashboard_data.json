@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T14:16:39.368050+00:00",
+  "generated_at": "2026-07-15T14:31:40.286681+00:00",
   "balance": {
     "current": 130.714,
     "cash": 130.714,
@@ -186,9 +186,9 @@
       "total_pnl": 67.587
     },
     "cross_coin": {
-      "n": 96,
-      "win_rate": 0.4792,
-      "total_pnl": -64.8333
+      "n": 99,
+      "win_rate": 0.4646,
+      "total_pnl": -95.1693
     },
     "london": {
       "n": 32,
