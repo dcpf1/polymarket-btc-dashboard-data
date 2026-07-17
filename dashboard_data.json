@@ -1,32 +1,50 @@
 {
-  "generated_at": "2026-07-17T14:12:01.567907+00:00",
+  "generated_at": "2026-07-17T14:21:12.159225+00:00",
   "balance": {
-    "current": 116.6026,
-    "cash": 116.6026,
+    "current": 118.8323,
+    "cash": 118.8323,
     "deployed": 0,
     "unrealized": 0,
     "starting": 150.0,
-    "peak": 116.6238,
-    "pnl_usd": -33.3974,
-    "pnl_pct": -22.2649
+    "peak": 118.8524,
+    "pnl_usd": -31.1677,
+    "pnl_pct": -20.7785
   },
   "trades": {
-    "total": 43,
-    "wins": 34,
+    "total": 45,
+    "wins": 36,
     "losses": 9,
-    "total_pnl": -33.3974
+    "total_pnl": -31.1677
   },
   "perf": {
-    "win_rate": 0.7907,
-    "avg_pnl_per_trade": -0.7767,
-    "n": 43,
-    "cap_bind_rate": 0.8605,
+    "win_rate": 0.8,
+    "avg_pnl_per_trade": -0.6926,
+    "n": 45,
+    "cap_bind_rate": 0.8222,
     "status": "red",
     "derisk_mult": 1.0,
-    "drawdown_pct": 0.0182
+    "drawdown_pct": 0.0169
   },
   "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-07-17T14:28:36.530362+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.85,
+      "correct": true,
+      "pnl": 0.3305,
+      "note": ""
+    },
+    {
+      "ts": "2026-07-17T14:28:36.463777+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.51,
+      "correct": true,
+      "pnl": 1.8992,
+      "note": ""
+    },
     {
       "ts": "2026-07-17T14:19:33.113667+00:00",
       "coin": "btc",
@@ -278,24 +296,6 @@
       "correct": false,
       "pnl": -22.752,
       "note": ""
-    },
-    {
-      "ts": "2026-07-15T15:27:56.950271+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.76,
-      "correct": true,
-      "pnl": 6.8533,
-      "note": ""
-    },
-    {
-      "ts": "2026-07-15T15:15:49.575592+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.86,
-      "correct": true,
-      "pnl": 3.4108,
-      "note": ""
     }
   ],
   "strategy_stats": {
@@ -322,9 +322,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 43,
-      "win_rate": 0.7907,
-      "total_pnl": -33.3974
+      "n": 45,
+      "win_rate": 0.8,
+      "total_pnl": -31.1677
     },
     "eth": {
       "n": 6,
