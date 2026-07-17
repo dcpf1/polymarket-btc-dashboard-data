@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-17T09:52:21.726056+00:00",
+  "generated_at": "2026-07-17T10:08:03.289219+00:00",
   "balance": {
     "current": 113.9056,
     "cash": 113.9056,
     "deployed": 0,
     "unrealized": 0,
     "starting": 150.0,
-    "peak": 154.604,
+    "peak": 113.9056,
     "pnl_usd": -36.0944,
     "pnl_pct": -24.0629
   },
@@ -22,8 +22,8 @@
     "n": 39,
     "cap_bind_rate": 0.9231,
     "status": "red",
-    "derisk_mult": 0.3,
-    "drawdown_pct": 26.3243
+    "derisk_mult": 1.0,
+    "drawdown_pct": 0.0
   },
   "open_positions": [],
   "recent_resolved": [
@@ -310,9 +310,9 @@
       "total_pnl": -126.9617
     },
     "london": {
-      "n": 34,
-      "win_rate": 0.4412,
-      "total_pnl": -40.7122
+      "n": 35,
+      "win_rate": 0.4286,
+      "total_pnl": -50.8242
     },
     "near_certainty_arb": {
       "n": 0,
