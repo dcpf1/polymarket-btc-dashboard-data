@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T05:54:58.494788+00:00",
+  "generated_at": "2026-07-17T05:57:09.095515+00:00",
   "balance": {
     "current": 118.6531,
     "cash": 118.6531,
@@ -23,25 +23,17 @@
     "cap_bind_rate": 0.9444,
     "status": "red"
   },
-  "open_positions": [
-    {
-      "coin": "eth",
-      "slug": "eth-updown-5m-1784267400",
-      "side": "Down",
-      "entry_price": 0.865,
-      "avg_fill": 0.87,
-      "shares": 6.412299,
-      "cost": 5.5787,
-      "current_p": 0.9784999999999999,
-      "model_p": 0.92,
-      "ev_pct": 5.7471,
-      "opened_at": "2026-07-17T05:53:46.284819+00:00",
-      "seconds_left": 31.5,
-      "unrealized_pnl": 0.6957,
-      "live_sized": false
-    }
-  ],
+  "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-07-17T05:57:15.122539+00:00",
+      "coin": "eth",
+      "side": "Down",
+      "entry": 0.87,
+      "correct": true,
+      "pnl": 0.7711,
+      "note": ""
+    },
     {
       "ts": "2026-07-17T00:26:18.392108+00:00",
       "coin": "btc",
@@ -302,22 +294,13 @@
       "correct": true,
       "pnl": 12.4043,
       "note": ""
-    },
-    {
-      "ts": "2026-07-14T15:15:42.162097+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.67,
-      "correct": false,
-      "pnl": -22.752,
-      "note": ""
     }
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 236,
-      "win_rate": 0.9153,
-      "total_pnl": 53.3347
+      "n": 237,
+      "win_rate": 0.9156,
+      "total_pnl": 54.717
     },
     "cross_coin": {
       "n": 105,
@@ -342,9 +325,9 @@
       "total_pnl": -31.3469
     },
     "eth": {
-      "n": 1,
+      "n": 2,
       "win_rate": 1.0,
-      "total_pnl": 1.9776
+      "total_pnl": 2.7487
     }
   }
 }
