@@ -55,6 +55,10 @@
   .chip{font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px}
   .chip.up{background:rgba(34,211,164,.16); color:var(--green)}
   .chip.down{background:rgba(245,85,109,.16); color:var(--red)}
+  .rg{font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; margin-left:5px; letter-spacing:.4px}
+  .rg.sized{background:rgba(34,211,164,.14); color:var(--green)}
+  .rg.probe{background:rgba(245,166,35,.16); color:var(--amber)}
+  .warn{color:var(--amber)}
   .tag{font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px}
   .tag.win{background:rgba(34,211,164,.16); color:var(--green)}
   .tag.loss{background:rgba(245,85,109,.16); color:var(--red)}
@@ -227,11 +231,17 @@ function drawEquity(hist, starting){
 function renderPerf(p){
   const status = p.status || "neutral";
   $("perf-dot").className = "dot " + status;
+  const dr = (p.derisk_mult==null) ? 1 : Number(p.derisk_mult);
+  const ddp = Number(p.drawdown_pct||0);
+  const drV = '<span class="'+(dr<1?'warn':'')+'">'+dr.toFixed(2)+'&times;</span>';
+  const ddV = '<span class="'+(ddp>0?'warn':'')+'">'+ddp.toFixed(1)+'%</span>';
   const cards = [
     ["Win Rate", p.n ? (100*Number(p.win_rate||0)).toFixed(1)+"%" : "—"],
     ["Avg PnL / Trade", p.n ? signMoney(p.avg_pnl_per_trade) : "—"],
     ["Trades", String(p.n||0)],
     ["Cap-Bind Rate", p.n ? (100*Number(p.cap_bind_rate||0)).toFixed(0)+"%" : "—"],
+    ["De-risk", drV],
+    ["Drawdown", ddV],
   ];
   $("perf-grid").innerHTML = p.n===0
     ? '<div class="empty span2">No resolved trades yet.</div>' + cards.map(statHTML).join("")
@@ -258,8 +268,9 @@ function renderOpen(list){
   const rows = list.map((p,i) => {
     const chip = p.side==="Up" ? '<span class="chip up">UP</span>' : '<span class="chip down">DOWN</span>';
     const so = p.live_sized===false ? ' <span class="shadowonly">eth</span>' : '';
+    const rg = p.regime ? ' <span class="rg '+(p.regime==="probe"?"probe":"sized")+'">'+String(p.regime).toUpperCase()+'</span>' : '';
     return '<tr>'+
-      '<td>'+String(p.coin||'').toUpperCase()+so+'</td>'+
+      '<td>'+String(p.coin||'').toUpperCase()+so+rg+'</td>'+
       '<td>'+chip+'</td>'+
       '<td>'+Number(p.avg_fill||0).toFixed(3)+'</td>'+
       '<td>'+Number(p.current_p||0).toFixed(3)+'</td>'+
