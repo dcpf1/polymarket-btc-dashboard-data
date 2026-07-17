@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T08:02:52.619197+00:00",
+  "generated_at": "2026-07-17T08:12:45.026219+00:00",
   "balance": {
     "current": 113.9056,
     "cash": 113.9056,
@@ -21,7 +21,9 @@
     "avg_pnl_per_trade": -0.9255,
     "n": 39,
     "cap_bind_rate": 0.9231,
-    "status": "red"
+    "status": "red",
+    "derisk_mult": 0.3,
+    "drawdown_pct": 26.3243
   },
   "open_positions": [],
   "recent_resolved": [
