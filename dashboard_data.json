@@ -1,51 +1,41 @@
 {
-  "generated_at": "2026-07-24T14:19:01.881129+00:00",
+  "generated_at": "2026-07-24T14:21:58.314343+00:00",
   "balance": {
-    "current": 102.8064,
-    "cash": 94.5401,
-    "deployed": 7.5601,
-    "unrealized": 0.7062,
+    "current": 102.7632,
+    "cash": 102.7632,
+    "deployed": 0,
+    "unrealized": 0,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -47.1936,
-    "pnl_pct": -31.4624
+    "pnl_usd": -47.2368,
+    "pnl_pct": -31.4912
   },
   "trades": {
-    "total": 80,
-    "wins": 62,
+    "total": 81,
+    "wins": 63,
     "losses": 18,
-    "total_pnl": -47.8998
+    "total_pnl": -47.2368
   },
   "perf": {
-    "win_rate": 0.775,
-    "avg_pnl_per_trade": -0.5987,
-    "n": 80,
+    "win_rate": 0.7778,
+    "avg_pnl_per_trade": -0.5832,
+    "n": 81,
     "cap_bind_rate": 0.6543,
     "status": "red",
-    "derisk_mult": 0.5268,
-    "drawdown_pct": 19.4925
+    "derisk_mult": 0.5254,
+    "drawdown_pct": 19.5263
   },
-  "open_positions": [
-    {
-      "coin": "btc",
-      "slug": "btc-updown-5m-1784902500",
-      "side": "Down",
-      "entry_price": 0.9,
-      "avg_fill": 0.91,
-      "shares": 8.307802,
-      "cost": 7.5601,
-      "current_p": 0.995,
-      "model_p": 0.9600000000000001,
-      "ev_pct": 5.4945,
-      "opened_at": "2026-07-24T14:18:36.171159+00:00",
-      "seconds_left": 88.1,
-      "unrealized_pnl": 0.7062,
-      "live_sized": true,
-      "regime": "sized",
-      "derisk_mult": 0.504
-    }
-  ],
+  "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-07-24T14:21:13.487980+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.91,
+      "correct": true,
+      "pnl": 0.663,
+      "note": ""
+    },
     {
       "ts": "2026-07-24T14:15:46.675083+00:00",
       "coin": "eth",
@@ -306,22 +296,13 @@
       "correct": false,
       "pnl": -15.168,
       "note": ""
-    },
-    {
-      "ts": "2026-07-21T06:50:30.951339+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.82,
-      "correct": true,
-      "pnl": 0.4166,
-      "note": ""
     }
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 268,
-      "win_rate": 0.9216,
-      "total_pnl": 102.3764
+      "n": 269,
+      "win_rate": 0.9219,
+      "total_pnl": 103.2534
     },
     "cross_coin": {
       "n": 135,
@@ -341,9 +322,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 80,
-      "win_rate": 0.775,
-      "total_pnl": -47.8998
+      "n": 81,
+      "win_rate": 0.7778,
+      "total_pnl": -47.2368
     },
     "eth": {
       "n": 23,
