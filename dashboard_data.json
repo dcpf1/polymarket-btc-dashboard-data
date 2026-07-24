@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T14:00:55.613265+00:00",
+  "generated_at": "2026-07-24T14:13:51.202563+00:00",
   "balance": {
     "current": 102.1002,
     "cash": 102.1002,
@@ -25,7 +25,26 @@
     "derisk_mult": 0.504,
     "drawdown_pct": 20.0455
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "eth",
+      "slug": "eth-updown-5m-1784902200",
+      "side": "Down",
+      "entry_price": 0.9,
+      "avg_fill": 0.95,
+      "shares": 7.958,
+      "cost": 7.5601,
+      "current_p": 0.98,
+      "model_p": 0.98,
+      "ev_pct": 3.1579,
+      "opened_at": "2026-07-24T14:13:51.202563+00:00",
+      "seconds_left": 98.8,
+      "unrealized_pnl": 0.2387,
+      "live_sized": false,
+      "regime": "sized",
+      "derisk_mult": 0.504
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-07-24T14:00:40.318593+00:00",
