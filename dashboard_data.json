@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T02:43:03.827544+00:00",
+  "generated_at": "2026-07-27T02:59:09.876630+00:00",
   "balance": {
     "current": 94.5814,
     "cash": 94.5814,
@@ -300,9 +300,9 @@
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 272,
-      "win_rate": 0.9191,
-      "total_pnl": 95.2645
+      "n": 273,
+      "win_rate": 0.9194,
+      "total_pnl": 97.6525
     },
     "cross_coin": {
       "n": 150,
