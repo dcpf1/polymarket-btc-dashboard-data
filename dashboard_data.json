@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-27T18:58:40.442571+00:00",
+  "generated_at": "2026-07-27T18:59:41.376284+00:00",
   "balance": {
-    "current": 91.9246,
+    "current": 92.3676,
     "cash": 89.9246,
     "deployed": 2.0,
-    "unrealized": 0.0,
+    "unrealized": 0.443,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -58.0754,
-    "pnl_pct": -38.7169
+    "pnl_usd": -57.6324,
+    "pnl_pct": -38.4216
   },
   "trades": {
     "total": 92,
@@ -23,7 +23,7 @@
     "cap_bind_rate": 0.6237,
     "status": "red",
     "derisk_mult": 0.3,
-    "drawdown_pct": 28.014
+    "drawdown_pct": 27.6671
   },
   "open_positions": [
     {
@@ -34,12 +34,12 @@
       "avg_fill": 0.79,
       "shares": 2.531646,
       "cost": 2.0,
-      "current_p": 0.79,
+      "current_p": 0.965,
       "model_p": 0.79,
       "ev_pct": 0.0,
       "opened_at": "2026-07-27T18:58:40.442571+00:00",
-      "seconds_left": 109.6,
-      "unrealized_pnl": 0.0,
+      "seconds_left": 48.6,
+      "unrealized_pnl": 0.443,
       "live_sized": true,
       "regime": "probe",
       "derisk_mult": 1.0
