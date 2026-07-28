@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T15:38:50.477856+00:00",
+  "generated_at": "2026-07-28T15:40:10.517668+00:00",
   "balance": {
     "current": 98.1012,
     "cash": 98.1012,
@@ -34,12 +34,12 @@
       "avg_fill": 0.88,
       "shares": 6.393068,
       "cost": 5.6259,
-      "current_p": 0.87,
+      "current_p": 0.83,
       "model_p": 0.93,
       "ev_pct": 5.6818,
       "opened_at": "2026-07-28T15:38:50.477856+00:00",
-      "seconds_left": 99.5,
-      "unrealized_pnl": -0.0639,
+      "seconds_left": 19.5,
+      "unrealized_pnl": -0.3197,
       "live_sized": false,
       "regime": "sized",
       "derisk_mult": 0.3751
