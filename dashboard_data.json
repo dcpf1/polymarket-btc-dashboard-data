@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-29T14:06:47.363525+00:00",
+  "generated_at": "2026-07-29T14:09:18.939545+00:00",
   "balance": {
-    "current": 97.6656,
-    "cash": 97.6656,
-    "deployed": 0,
-    "unrealized": 0,
+    "current": 98.0002,
+    "cash": 92.2504,
+    "deployed": 5.4152,
+    "unrealized": 0.3346,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -52.3344,
-    "pnl_pct": -34.8896
+    "pnl_usd": -51.9998,
+    "pnl_pct": -34.6665
   },
   "trades": {
     "total": 111,
@@ -20,12 +20,31 @@
     "win_rate": 0.7838,
     "avg_pnl_per_trade": -0.4715,
     "n": 111,
-    "cap_bind_rate": 0.6126,
+    "cap_bind_rate": 0.6161,
     "status": "red",
-    "derisk_mult": 0.361,
-    "drawdown_pct": 23.5182
+    "derisk_mult": 0.3718,
+    "drawdown_pct": 23.2562
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "btc",
+      "slug": "btc-updown-5m-1785333900",
+      "side": "Down",
+      "entry_price": 0.885,
+      "avg_fill": 0.89,
+      "shares": 6.084494,
+      "cost": 5.4152,
+      "current_p": 0.945,
+      "model_p": 0.9400000000000001,
+      "ev_pct": 5.618,
+      "opened_at": "2026-07-29T14:08:40.976245+00:00",
+      "seconds_left": 71.1,
+      "unrealized_pnl": 0.3346,
+      "live_sized": true,
+      "regime": "sized",
+      "derisk_mult": 0.361
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-07-29T14:06:21.536937+00:00",
@@ -334,13 +353,13 @@
   },
   "eth_book": {
     "balance": {
-      "current": 150.0,
-      "cash": 150.0,
-      "deployed": 0,
+      "current": 150.25,
+      "cash": 135.0,
+      "deployed": 15.0,
       "starting": 150.0,
-      "peak": 150.0,
-      "pnl_usd": 0.0,
-      "pnl_pct": 0.0,
+      "peak": 150.25,
+      "pnl_usd": 0.25,
+      "pnl_pct": 0.1667,
       "drawdown_pct": 0.0
     },
     "trades": {
@@ -351,7 +370,20 @@
       "win_rate": 0.0,
       "avg_pnl": 0.0
     },
-    "open_positions": [],
+    "open_positions": [
+      {
+        "coin": "eth",
+        "slug": "eth-updown-5m-1785333900",
+        "side": "Down",
+        "entry_price": 0.89,
+        "avg_fill": 0.9,
+        "cost": 15.0,
+        "current_p": 0.915,
+        "regime": "sized",
+        "unrealized_pnl": 0.25,
+        "seconds_left": 71.1
+      }
+    ],
     "recent_resolved": []
   }
 }
