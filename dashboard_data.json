@@ -1,32 +1,41 @@
 {
-  "generated_at": "2026-07-29T14:10:31.982425+00:00",
+  "generated_at": "2026-07-29T14:20:46.231491+00:00",
   "balance": {
-    "current": 98.2742,
-    "cash": 98.2742,
+    "current": 98.6047,
+    "cash": 98.6047,
     "deployed": 0,
     "unrealized": 0,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -51.7258,
-    "pnl_pct": -34.4839
+    "pnl_usd": -51.3953,
+    "pnl_pct": -34.2635
   },
   "trades": {
-    "total": 112,
-    "wins": 88,
+    "total": 113,
+    "wins": 89,
     "losses": 24,
-    "total_pnl": -51.7258
+    "total_pnl": -51.3953
   },
   "perf": {
-    "win_rate": 0.7857,
-    "avg_pnl_per_trade": -0.4618,
-    "n": 112,
-    "cap_bind_rate": 0.6161,
+    "win_rate": 0.7876,
+    "avg_pnl_per_trade": -0.4548,
+    "n": 113,
+    "cap_bind_rate": 0.6106,
     "status": "red",
-    "derisk_mult": 0.3806,
-    "drawdown_pct": 23.0416
+    "derisk_mult": 0.3913,
+    "drawdown_pct": 22.7828
   },
   "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-07-29T14:20:54.463160+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.85,
+      "correct": true,
+      "pnl": 0.3305,
+      "note": ""
+    },
     {
       "ts": "2026-07-29T14:10:41.595773+00:00",
       "coin": "btc",
@@ -287,22 +296,13 @@
       "correct": true,
       "pnl": 0.5058,
       "note": ""
-    },
-    {
-      "ts": "2026-07-27T19:20:53.613690+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.89,
-      "correct": true,
-      "pnl": 0.5058,
-      "note": ""
     }
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 289,
-      "win_rate": 0.9135,
-      "total_pnl": 85.8934
+      "n": 291,
+      "win_rate": 0.9141,
+      "total_pnl": 88.269
     },
     "cross_coin": {
       "n": 162,
@@ -322,9 +322,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 112,
-      "win_rate": 0.7857,
-      "total_pnl": -51.7258
+      "n": 113,
+      "win_rate": 0.7876,
+      "total_pnl": -51.3953
     },
     "eth": {
       "n": 44,
