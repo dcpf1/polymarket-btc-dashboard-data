@@ -111,6 +111,13 @@
     <div class="mon-grid" id="coin-grid"></div>
   </section>
 
+  <section class="panel span2" id="p-ethbook" style="display:none">
+    <h2>ETH Book <span class="mut" style="font-size:11px">(separate $150 paper
+      portfolio &mdash; experimental, not a validated edge)</span></h2>
+    <div class="perf-grid" id="eth-grid"></div>
+    <div id="eth-open-wrap"></div>
+  </section>
+
   <section class="panel span2" id="p-open">
     <h2>Open Positions</h2>
     <div id="open-wrap"></div>
@@ -184,6 +191,34 @@ function render(d, hist){
   renderOpen(d.open_positions || []);
   renderResolved(d.recent_resolved || []);
   renderStrategies(d.strategy_stats || {});
+  renderEthBook(d.eth_book);
+}
+
+// ETH trades in their own book, deliberately kept out of the headline balance:
+// ETH stickiness shows a positive point estimate but a Wilson lower bound below
+// fee-adjusted breakeven in every price band, so it is an experiment on paper.
+function renderEthBook(b){
+  const sec = $("p-ethbook");
+  if(!b){ sec.style.display = "none"; return; }
+  sec.style.display = "";
+  const bal = b.balance || {}, tr = b.trades || {};
+  const px = (v) => Number(v || 0).toFixed(3);
+  const cell = (n,v,k) => '<div class="card"><div class="name">'+n+'</div>'+
+    '<div class="line"><b class="'+(k||"")+'">'+v+'</b></div></div>';
+  $("eth-grid").innerHTML =
+    cell("Value", money(bal.current)) +
+    cell("PnL", signMoney(bal.pnl_usd), cls(bal.pnl_usd)) +
+    cell("Trades", (tr.total||0) + " (" + pct((tr.win_rate||0)*100) + " win)") +
+    cell("Drawdown", pct(bal.drawdown_pct));
+  const op = b.open_positions || [];
+  $("eth-open-wrap").innerHTML = op.length
+    ? '<table><thead><tr><th>Market</th><th>Side</th><th>Fill</th><th>Cost</th>'
+      + '<th>Now</th><th>Left</th></tr></thead><tbody>'
+      + op.map(p => '<tr><td>'+String(p.slug||"")+'</td><td>'+String(p.side||"")+'</td>'
+        + '<td>'+px(p.avg_fill)+'</td><td>'+money(p.cost)+'</td>'
+        + '<td>'+px(p.current_p)+'</td><td>'+Math.round(p.seconds_left||0)+'s</td></tr>').join("")
+      + '</tbody></table>'
+    : '<p class="mut">No open ETH positions.</p>';
 }
 
 function renderPortfolio(b, hist){
