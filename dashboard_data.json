@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T08:36:12.485270+00:00",
+  "generated_at": "2026-07-29T08:37:16.353826+00:00",
   "balance": {
     "current": 99.3008,
     "cash": 99.3008,
@@ -331,27 +331,5 @@
       "win_rate": 0.9318,
       "total_pnl": 27.5316
     }
-  },
-  "eth_book": {
-    "balance": {
-      "current": 150.0,
-      "cash": 150.0,
-      "deployed": 0,
-      "starting": 150.0,
-      "peak": 150.0,
-      "pnl_usd": 0.0,
-      "pnl_pct": 0.0,
-      "drawdown_pct": 0.0
-    },
-    "trades": {
-      "total": 0,
-      "wins": 0,
-      "losses": 0,
-      "total_pnl": 0.0,
-      "win_rate": 0.0,
-      "avg_pnl": 0.0
-    },
-    "open_positions": [],
-    "recent_resolved": []
   }
 }
