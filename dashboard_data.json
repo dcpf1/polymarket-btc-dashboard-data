@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-21T21:48:50.644908+00:00",
+  "generated_at": "2026-08-21T21:53:58.397007+00:00",
   "balance": {
-    "current": 72.6051,
-    "cash": 72.6051,
-    "deployed": 0,
-    "unrealized": 0,
+    "current": 72.5923,
+    "cash": 70.6051,
+    "deployed": 2.0,
+    "unrealized": -0.0128,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -77.3949,
-    "pnl_pct": -51.5966
+    "pnl_usd": -77.4077,
+    "pnl_pct": -51.6051
   },
   "trades": {
     "total": 196,
@@ -20,12 +20,31 @@
     "win_rate": 0.75,
     "avg_pnl_per_trade": -0.3949,
     "n": 196,
-    "cap_bind_rate": 0.4949,
+    "cap_bind_rate": 0.4924,
     "status": "red",
     "derisk_mult": 0.3,
-    "drawdown_pct": 43.1431
+    "drawdown_pct": 43.1531
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "btc",
+      "slug": "btc-updown-5m-1787349000",
+      "side": "Up",
+      "entry_price": 0.775,
+      "avg_fill": 0.78,
+      "shares": 2.564103,
+      "cost": 2.0,
+      "current_p": 0.775,
+      "model_p": 0.78,
+      "ev_pct": 0.0,
+      "opened_at": "2026-08-21T21:53:58.397007+00:00",
+      "seconds_left": 91.6,
+      "unrealized_pnl": -0.0128,
+      "live_sized": true,
+      "regime": "probe",
+      "derisk_mult": 1.0
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-08-21T20:10:54.926272+00:00",
