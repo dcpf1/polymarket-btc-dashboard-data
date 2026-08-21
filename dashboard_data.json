@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T22:23:39.622225+00:00",
+  "generated_at": "2026-08-21T22:25:08.914439+00:00",
   "balance": {
     "current": 71.1244,
     "cash": 71.1244,
@@ -334,14 +334,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 110.892,
+      "current": 110.9687,
       "cash": 105.8806,
       "deployed": 4.5,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -39.108,
-      "pnl_pct": -26.072,
-      "drawdown_pct": 31.7678
+      "pnl_usd": -39.0313,
+      "pnl_pct": -26.0209,
+      "drawdown_pct": 31.7206
     },
     "trades": {
       "total": 50,
@@ -359,10 +359,10 @@
         "entry_price": 0.87,
         "avg_fill": 0.88,
         "cost": 4.5,
-        "current_p": 0.98,
+        "current_p": 0.995,
         "regime": "sized",
-        "unrealized_pnl": 0.5114,
-        "seconds_left": 110.4
+        "unrealized_pnl": 0.5881,
+        "seconds_left": 21.1
       }
     ],
     "recent_resolved": [
