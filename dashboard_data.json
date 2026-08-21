@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-21T13:38:45.529177+00:00",
+  "generated_at": "2026-08-21T13:40:11.237631+00:00",
   "balance": {
-    "current": 70.4114,
-    "cash": 70.4114,
-    "deployed": 0,
-    "unrealized": 0,
+    "current": 71.1237,
+    "cash": 68.4114,
+    "deployed": 2.0,
+    "unrealized": 0.7123,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -79.5886,
-    "pnl_pct": -53.0591
+    "pnl_usd": -78.8763,
+    "pnl_pct": -52.5842
   },
   "trades": {
     "total": 185,
@@ -20,12 +20,31 @@
     "win_rate": 0.7405,
     "avg_pnl_per_trade": -0.4302,
     "n": 185,
-    "cap_bind_rate": 0.4973,
+    "cap_bind_rate": 0.4946,
     "status": "red",
     "derisk_mult": 0.3,
-    "drawdown_pct": 44.861
+    "drawdown_pct": 44.3032
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "btc",
+      "slug": "btc-updown-5m-1787319300",
+      "side": "Up",
+      "entry_price": 0.72,
+      "avg_fill": 0.73,
+      "shares": 2.739726,
+      "cost": 2.0,
+      "current_p": 0.99,
+      "model_p": 0.73,
+      "ev_pct": 0.0,
+      "opened_at": "2026-08-21T13:39:29.192210+00:00",
+      "seconds_left": 18.8,
+      "unrealized_pnl": 0.7123,
+      "live_sized": true,
+      "regime": "probe",
+      "derisk_mult": 1.0
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-08-21T12:16:20.499198+00:00",
@@ -334,14 +353,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 111.7063,
+      "current": 112.2288,
       "cash": 107.2313,
       "deployed": 4.5,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -38.2937,
-      "pnl_pct": -25.5291,
-      "drawdown_pct": 31.2668
+      "pnl_usd": -37.7712,
+      "pnl_pct": -25.1808,
+      "drawdown_pct": 30.9453
     },
     "trades": {
       "total": 43,
@@ -359,10 +378,10 @@
         "entry_price": 0.895,
         "avg_fill": 0.9,
         "cost": 4.5,
-        "current_p": 0.895,
+        "current_p": 0.9995,
         "regime": "sized",
-        "unrealized_pnl": -0.025,
-        "seconds_left": 104.5
+        "unrealized_pnl": 0.4975,
+        "seconds_left": 18.8
       }
     ],
     "recent_resolved": [
