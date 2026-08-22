@@ -1,51 +1,41 @@
 {
-  "generated_at": "2026-08-22T00:15:26.987675+00:00",
+  "generated_at": "2026-08-22T00:16:58.463298+00:00",
   "balance": {
-    "current": 67.7362,
-    "cash": 67.7112,
-    "deployed": 2.0,
-    "unrealized": -1.975,
+    "current": 67.6888,
+    "cash": 67.6888,
+    "deployed": 0,
+    "unrealized": 0,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -82.2638,
-    "pnl_pct": -54.8425
+    "pnl_usd": -82.3112,
+    "pnl_pct": -54.8741
   },
   "trades": {
-    "total": 200,
+    "total": 201,
     "wins": 149,
-    "losses": 51,
-    "total_pnl": -80.2888
+    "losses": 52,
+    "total_pnl": -82.3112
   },
   "perf": {
-    "win_rate": 0.745,
-    "avg_pnl_per_trade": -0.4014,
-    "n": 200,
+    "win_rate": 0.7413,
+    "avg_pnl_per_trade": -0.4095,
+    "n": 201,
     "cap_bind_rate": 0.4826,
     "status": "red",
     "derisk_mult": 0.3,
-    "drawdown_pct": 46.9559
+    "drawdown_pct": 46.993
   },
-  "open_positions": [
-    {
-      "coin": "btc",
-      "slug": "btc-updown-5m-1787357400",
-      "side": "Down",
-      "entry_price": 0.795,
-      "avg_fill": 0.8,
-      "shares": 2.5,
-      "cost": 2.0,
-      "current_p": 0.01,
-      "model_p": 0.8,
-      "ev_pct": 0.0,
-      "opened_at": "2026-08-22T00:14:03.407653+00:00",
-      "seconds_left": 3.0,
-      "unrealized_pnl": -1.975,
-      "live_sized": true,
-      "regime": "probe",
-      "derisk_mult": 1.0
-    }
-  ],
+  "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-08-22T00:16:28.745378+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.8,
+      "correct": false,
+      "pnl": -2.0224,
+      "note": ""
+    },
     {
       "ts": "2026-08-21T23:06:14.707843+00:00",
       "coin": "btc",
@@ -306,15 +296,6 @@
       "correct": false,
       "pnl": -2.0224,
       "note": ""
-    },
-    {
-      "ts": "2026-08-21T01:36:27.019350+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.83,
-      "correct": true,
-      "pnl": 0.3872,
-      "note": ""
     }
   ],
   "strategy_stats": {
@@ -341,9 +322,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 200,
-      "win_rate": 0.745,
-      "total_pnl": -80.2888
+      "n": 201,
+      "win_rate": 0.7413,
+      "total_pnl": -82.3112
     },
     "eth": {
       "n": 44,
@@ -353,38 +334,34 @@
   },
   "eth_book": {
     "balance": {
-      "current": 106.9606,
-      "cash": 106.9214,
-      "deployed": 2.0,
+      "current": 106.899,
+      "cash": 106.899,
+      "deployed": 0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -43.0394,
-      "pnl_pct": -28.6929,
-      "drawdown_pct": 34.1868
+      "pnl_usd": -43.101,
+      "pnl_pct": -28.734,
+      "drawdown_pct": 34.2247
     },
     "trades": {
-      "total": 52,
+      "total": 53,
       "wins": 38,
-      "losses": 14,
-      "total_pnl": -41.0786,
-      "win_rate": 0.7308,
-      "avg_pnl": -0.79
+      "losses": 15,
+      "total_pnl": -43.101,
+      "win_rate": 0.717,
+      "avg_pnl": -0.8132
     },
-    "open_positions": [
-      {
-        "coin": "eth",
-        "slug": "eth-updown-5m-1787357400",
-        "side": "Down",
-        "entry_price": 0.535,
-        "avg_fill": 0.51,
-        "cost": 2.0,
-        "current_p": 0.01,
-        "regime": "probe",
-        "unrealized_pnl": -1.9608,
-        "seconds_left": 3.0
-      }
-    ],
+    "open_positions": [],
     "recent_resolved": [
+      {
+        "ts": "2026-08-22T00:16:43.175873+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.51,
+        "correct": false,
+        "pnl": -2.0224,
+        "note": ""
+      },
       {
         "ts": "2026-08-21T22:56:28.652418+00:00",
         "coin": "eth",
@@ -644,15 +621,6 @@
         "entry": 0.64,
         "correct": true,
         "pnl": 1.1026,
-        "note": ""
-      },
-      {
-        "ts": "2026-08-19T21:56:45.618809+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.57,
-        "correct": false,
-        "pnl": -2.0224,
         "note": ""
       }
     ]
