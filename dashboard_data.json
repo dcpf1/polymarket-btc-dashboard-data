@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T10:06:47.991527+00:00",
+  "generated_at": "2026-08-24T10:19:29.761110+00:00",
   "balance": {
     "current": 68.6635,
     "cash": 68.6635,
@@ -334,14 +334,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 103.3321,
-      "cash": 103.3321,
-      "deployed": 0,
+      "current": 103.8377,
+      "cash": 98.8321,
+      "deployed": 4.5,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -46.6679,
-      "pnl_pct": -31.1119,
-      "drawdown_pct": 36.4194
+      "pnl_usd": -46.1623,
+      "pnl_pct": -30.7749,
+      "drawdown_pct": 36.1083
     },
     "trades": {
       "total": 73,
@@ -351,7 +351,20 @@
       "win_rate": 0.7397,
       "avg_pnl": -0.6393
     },
-    "open_positions": [],
+    "open_positions": [
+      {
+        "coin": "eth",
+        "slug": "eth-updown-5m-1787566500",
+        "side": "Down",
+        "entry_price": 0.86,
+        "avg_fill": 0.89,
+        "cost": 4.5,
+        "current_p": 0.99,
+        "regime": "sized",
+        "unrealized_pnl": 0.5056,
+        "seconds_left": 60.2
+      }
+    ],
     "recent_resolved": [
       {
         "ts": "2026-08-24T05:48:24.595556+00:00",
