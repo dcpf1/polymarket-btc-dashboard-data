@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T02:25:18.913303+00:00",
+  "generated_at": "2026-08-25T02:26:40.017981+00:00",
   "balance": {
     "current": 73.6514,
     "cash": 73.6514,
@@ -300,9 +300,9 @@
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 403,
-      "win_rate": 0.8784,
-      "total_pnl": 33.8193
+      "n": 404,
+      "win_rate": 0.8787,
+      "total_pnl": 36.053
     },
     "cross_coin": {
       "n": 171,
@@ -334,38 +334,34 @@
   },
   "eth_book": {
     "balance": {
-      "current": 101.8248,
-      "cash": 96.3248,
-      "deployed": 4.5,
+      "current": 101.83,
+      "cash": 101.83,
+      "deployed": 0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -48.1752,
-      "pnl_pct": -32.1168,
-      "drawdown_pct": 37.3469
+      "pnl_usd": -48.17,
+      "pnl_pct": -32.1133,
+      "drawdown_pct": 37.3437
     },
     "trades": {
-      "total": 85,
-      "wins": 63,
+      "total": 86,
+      "wins": 64,
       "losses": 22,
-      "total_pnl": -49.1752,
-      "win_rate": 0.7412,
-      "avg_pnl": -0.5785
+      "total_pnl": -48.17,
+      "win_rate": 0.7442,
+      "avg_pnl": -0.5601
     },
-    "open_positions": [
-      {
-        "coin": "eth",
-        "slug": "eth-updown-5m-1787624400",
-        "side": "Down",
-        "entry_price": 0.78,
-        "avg_fill": 0.81,
-        "cost": 4.5,
-        "current_p": 0.99,
-        "regime": "sized",
-        "unrealized_pnl": 1.0,
-        "seconds_left": 11.1
-      }
-    ],
+    "open_positions": [],
     "recent_resolved": [
+      {
+        "ts": "2026-08-25T02:26:24.515010+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.81,
+        "correct": true,
+        "pnl": 1.0052,
+        "note": ""
+      },
       {
         "ts": "2026-08-25T01:33:35.444226+00:00",
         "coin": "eth",
@@ -625,15 +621,6 @@
         "entry": 0.55,
         "correct": true,
         "pnl": 1.614,
-        "note": ""
-      },
-      {
-        "ts": "2026-08-22T01:28:21.871125+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.85,
-        "correct": false,
-        "pnl": -4.5504,
         "note": ""
       }
     ]
