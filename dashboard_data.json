@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-25T14:26:05.400945+00:00",
+  "generated_at": "2026-08-25T14:33:48.318790+00:00",
   "balance": {
     "current": 72.8046,
-    "cash": 72.8046,
-    "deployed": 0,
-    "unrealized": 0,
+    "cash": 70.8046,
+    "deployed": 2.0,
+    "unrealized": 0.0,
     "starting": 150.0,
     "peak": 127.6979,
     "pnl_usd": -77.1954,
@@ -20,12 +20,31 @@
     "win_rate": 0.7582,
     "avg_pnl_per_trade": -0.3164,
     "n": 244,
-    "cap_bind_rate": 0.4512,
+    "cap_bind_rate": 0.4494,
     "status": "red",
     "derisk_mult": 0.3,
     "drawdown_pct": 42.9868
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "btc",
+      "slug": "btc-updown-5m-1787668200",
+      "side": "Up",
+      "entry_price": 0.75,
+      "avg_fill": 0.75,
+      "shares": 2.666667,
+      "cost": 2.0,
+      "current_p": 0.75,
+      "model_p": 0.75,
+      "ev_pct": 0.0,
+      "opened_at": "2026-08-25T14:33:48.318790+00:00",
+      "seconds_left": 101.7,
+      "unrealized_pnl": 0.0,
+      "live_sized": true,
+      "regime": "probe",
+      "derisk_mult": 1.0
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-08-25T14:26:16.369927+00:00",
@@ -334,14 +353,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 100.999,
-      "cash": 100.999,
-      "deployed": 0,
+      "current": 101.5746,
+      "cash": 96.499,
+      "deployed": 4.5,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -49.001,
-      "pnl_pct": -32.6673,
-      "drawdown_pct": 37.855
+      "pnl_usd": -48.4254,
+      "pnl_pct": -32.2836,
+      "drawdown_pct": 37.5008
     },
     "trades": {
       "total": 89,
@@ -351,7 +370,20 @@
       "win_rate": 0.7416,
       "avg_pnl": -0.5506
     },
-    "open_positions": [],
+    "open_positions": [
+      {
+        "coin": "eth",
+        "slug": "eth-updown-5m-1787668200",
+        "side": "Up",
+        "entry_price": 0.84,
+        "avg_fill": 0.86,
+        "cost": 4.5,
+        "current_p": 0.97,
+        "regime": "sized",
+        "unrealized_pnl": 0.5756,
+        "seconds_left": 101.7
+      }
+    ],
     "recent_resolved": [
       {
         "ts": "2026-08-25T12:46:27.121982+00:00",
