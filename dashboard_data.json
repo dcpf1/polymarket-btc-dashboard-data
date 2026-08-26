@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-26T05:31:59.659419+00:00",
+  "generated_at": "2026-08-26T05:34:27.526429+00:00",
   "balance": {
-    "current": 76.7953,
-    "cash": 76.7953,
-    "deployed": 0,
-    "unrealized": 0,
+    "current": 76.7757,
+    "cash": 74.7953,
+    "deployed": 2.0,
+    "unrealized": -0.0196,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -73.2047,
-    "pnl_pct": -48.8031
+    "pnl_usd": -73.2243,
+    "pnl_pct": -48.8162
   },
   "trades": {
     "total": 249,
@@ -20,12 +20,31 @@
     "win_rate": 0.7631,
     "avg_pnl_per_trade": -0.294,
     "n": 249,
-    "cap_bind_rate": 0.4502,
+    "cap_bind_rate": 0.4484,
     "status": "red",
     "derisk_mult": 0.3,
-    "drawdown_pct": 39.8617
+    "drawdown_pct": 39.8771
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "coin": "btc",
+      "slug": "btc-updown-5m-1787722200",
+      "side": "Up",
+      "entry_price": 0.505,
+      "avg_fill": 0.51,
+      "shares": 3.921569,
+      "cost": 2.0,
+      "current_p": 0.505,
+      "model_p": 0.51,
+      "ev_pct": 0.0,
+      "opened_at": "2026-08-26T05:33:57.608046+00:00",
+      "seconds_left": 62.5,
+      "unrealized_pnl": -0.0196,
+      "live_sized": true,
+      "regime": "probe",
+      "derisk_mult": 1.0
+    }
+  ],
   "recent_resolved": [
     {
       "ts": "2026-08-26T05:16:00.749462+00:00",
@@ -334,14 +353,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 103.5804,
-      "cash": 103.5804,
-      "deployed": 0,
+      "current": 103.5608,
+      "cash": 101.5804,
+      "deployed": 2.0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -46.4196,
-      "pnl_pct": -30.9464,
-      "drawdown_pct": 36.2666
+      "pnl_usd": -46.4392,
+      "pnl_pct": -30.9595,
+      "drawdown_pct": 36.2787
     },
     "trades": {
       "total": 91,
@@ -351,7 +370,20 @@
       "win_rate": 0.7473,
       "avg_pnl": -0.5101
     },
-    "open_positions": [],
+    "open_positions": [
+      {
+        "coin": "eth",
+        "slug": "eth-updown-5m-1787722200",
+        "side": "Up",
+        "entry_price": 0.505,
+        "avg_fill": 0.51,
+        "cost": 2.0,
+        "current_p": 0.505,
+        "regime": "probe",
+        "unrealized_pnl": -0.0196,
+        "seconds_left": 62.5
+      }
+    ],
     "recent_resolved": [
       {
         "ts": "2026-08-26T04:11:06.813286+00:00",
