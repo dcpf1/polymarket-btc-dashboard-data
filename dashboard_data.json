@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T12:26:40.373568+00:00",
+  "generated_at": "2026-08-27T12:42:03.427617+00:00",
   "balance": {
     "current": 84.0243,
     "cash": 84.0243,
@@ -310,9 +310,9 @@
       "total_pnl": -216.0137
     },
     "london": {
-      "n": 61,
-      "win_rate": 0.4098,
-      "total_pnl": -103.508
+      "n": 62,
+      "win_rate": 0.4194,
+      "total_pnl": -93.62
     },
     "near_certainty_arb": {
       "n": 0,
