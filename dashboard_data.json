@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T20:30:20.440497+00:00",
+  "generated_at": "2026-08-31T20:36:39.671440+00:00",
   "balance": {
     "current": 92.9064,
     "cash": 92.9064,
@@ -354,6 +354,15 @@
     "open_positions": [],
     "recent_resolved": [
       {
+        "ts": "2026-08-31T20:36:56.454652+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.88,
+        "correct": null,
+        "pnl": 0.0,
+        "note": "void"
+      },
+      {
         "ts": "2026-08-31T20:30:36.321527+00:00",
         "coin": "eth",
         "side": "Down",
@@ -612,15 +621,6 @@
         "entry": 0.67,
         "correct": false,
         "pnl": -2.0224,
-        "note": ""
-      },
-      {
-        "ts": "2026-08-25T00:15:53.482479+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.91,
-        "correct": false,
-        "pnl": -4.5504,
         "note": ""
       }
     ]
