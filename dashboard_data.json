@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T19:09:39.165137+00:00",
+  "generated_at": "2026-09-03T19:10:48.287018+00:00",
   "balance": {
     "current": 98.0011,
     "cash": 96.0403,
@@ -38,7 +38,7 @@
       "model_p": 0.51,
       "ev_pct": 0.0,
       "opened_at": "2026-09-03T19:09:06.704678+00:00",
-      "seconds_left": 50.8,
+      "seconds_left": 0.0,
       "unrealized_pnl": -0.0392,
       "live_sized": true,
       "regime": "probe",
@@ -319,8 +319,8 @@
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 468,
-      "win_rate": 0.8697,
+      "n": 470,
+      "win_rate": 0.866,
       "total_pnl": 128.9251
     },
     "cross_coin": {
@@ -381,7 +381,7 @@
         "current_p": 0.5,
         "regime": "sized",
         "unrealized_pnl": -2.0275,
-        "seconds_left": 50.8
+        "seconds_left": 0.0
       }
     ],
     "recent_resolved": [
