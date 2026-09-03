@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-03T19:45:46.382930+00:00",
+  "generated_at": "2026-09-03T19:56:14.634128+00:00",
   "balance": {
-    "current": 96.0403,
-    "cash": 93.5403,
-    "deployed": 4.5,
-    "unrealized": -2.0,
+    "current": 98.0403,
+    "cash": 98.0403,
+    "deployed": 0,
+    "unrealized": 0,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -53.9597,
-    "pnl_pct": -35.9731
+    "pnl_usd": -51.9597,
+    "pnl_pct": -34.6398
   },
   "trades": {
     "total": 310,
@@ -22,30 +22,20 @@
     "n": 310,
     "cap_bind_rate": 0.4164,
     "status": "red",
-    "derisk_mult": 0.3086,
-    "drawdown_pct": 24.791
+    "derisk_mult": 0.3731,
+    "drawdown_pct": 23.2248
   },
-  "open_positions": [
-    {
-      "coin": "btc",
-      "slug": "btc-updown-5m-1788463800",
-      "side": "Down",
-      "entry_price": 0.5,
-      "avg_fill": 0.9,
-      "shares": 5.0,
-      "cost": 4.5,
-      "current_p": 0.5,
-      "model_p": 0.9500000000000001,
-      "ev_pct": 5.5556,
-      "opened_at": "2026-09-03T19:33:47.600066+00:00",
-      "seconds_left": 0.0,
-      "unrealized_pnl": -2.0,
-      "live_sized": true,
-      "regime": "sized",
-      "derisk_mult": 0.3
-    }
-  ],
+  "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-09-03T19:55:49.978362+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.9,
+      "correct": null,
+      "pnl": 0.0,
+      "note": "void"
+    },
     {
       "ts": "2026-09-03T19:45:55.705632+00:00",
       "coin": "btc",
@@ -306,15 +296,6 @@
       "correct": true,
       "pnl": 0.9627,
       "note": ""
-    },
-    {
-      "ts": "2026-08-31T14:31:27.290676+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.82,
-      "correct": true,
-      "pnl": 0.4166,
-      "note": ""
     }
   ],
   "strategy_stats": {
@@ -353,14 +334,14 @@
   },
   "eth_book": {
     "balance": {
-      "current": 89.3479,
-      "cash": 86.9795,
-      "deployed": 4.5,
+      "current": 91.4795,
+      "cash": 91.4795,
+      "deployed": 0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -60.6521,
-      "pnl_pct": -40.4347,
-      "drawdown_pct": 45.024
+      "pnl_usd": -58.5205,
+      "pnl_pct": -39.0137,
+      "drawdown_pct": 43.7124
     },
     "trades": {
       "total": 137,
@@ -370,21 +351,17 @@
       "win_rate": 0.7445,
       "avg_pnl": -0.4272
     },
-    "open_positions": [
-      {
-        "coin": "eth",
-        "slug": "eth-updown-5m-1788463800",
-        "side": "Down",
-        "entry_price": 0.52,
-        "avg_fill": 0.95,
-        "cost": 4.5,
-        "current_p": 0.5,
-        "regime": "sized",
-        "unrealized_pnl": -2.1316,
-        "seconds_left": 0.0
-      }
-    ],
+    "open_positions": [],
     "recent_resolved": [
+      {
+        "ts": "2026-09-03T19:55:59.609547+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.95,
+        "correct": null,
+        "pnl": 0.0,
+        "note": "void"
+      },
       {
         "ts": "2026-09-03T19:46:06.683180+00:00",
         "coin": "eth",
@@ -645,15 +622,6 @@
         "correct": null,
         "pnl": 0.0,
         "note": "void"
-      },
-      {
-        "ts": "2026-08-31T20:30:36.321527+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.9,
-        "correct": true,
-        "pnl": 0.4496,
-        "note": ""
       }
     ]
   }
