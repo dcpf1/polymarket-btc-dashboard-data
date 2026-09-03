@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T19:34:20.257895+00:00",
+  "generated_at": "2026-09-03T19:35:30.051468+00:00",
   "balance": {
     "current": 93.5614,
     "cash": 87.9628,
@@ -56,7 +56,7 @@
       "model_p": 0.9500000000000001,
       "ev_pct": 5.5556,
       "opened_at": "2026-09-03T19:33:47.600066+00:00",
-      "seconds_left": 69.7,
+      "seconds_left": 0.0,
       "unrealized_pnl": -2.0,
       "live_sized": true,
       "regime": "sized",
@@ -411,7 +411,7 @@
         "current_p": 0.5,
         "regime": "sized",
         "unrealized_pnl": -2.1316,
-        "seconds_left": 69.7
+        "seconds_left": 0.0
       }
     ],
     "recent_resolved": [
