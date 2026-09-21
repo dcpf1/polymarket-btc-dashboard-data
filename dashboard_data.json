@@ -1,32 +1,194 @@
 {
-  "generated_at": "2026-09-19T15:20:51.326815+00:00",
+  "generated_at": "2026-09-21T17:47:41.295819+00:00",
   "balance": {
-    "current": 100.8176,
-    "cash": 100.8176,
+    "current": 104.7416,
+    "cash": 104.7416,
     "deployed": 0,
     "unrealized": 0,
     "starting": 150.0,
     "peak": 127.6979,
-    "pnl_usd": -49.1824,
-    "pnl_pct": -32.7883
+    "pnl_usd": -45.2584,
+    "pnl_pct": -30.1723
   },
   "trades": {
-    "total": 388,
-    "wins": 302,
-    "losses": 86,
-    "total_pnl": -49.1824
+    "total": 405,
+    "wins": 315,
+    "losses": 90,
+    "total_pnl": -45.2584
   },
   "perf": {
-    "win_rate": 0.7784,
-    "avg_pnl_per_trade": -0.1268,
-    "n": 388,
-    "cap_bind_rate": 0.3899,
+    "win_rate": 0.7778,
+    "avg_pnl_per_trade": -0.1117,
+    "n": 405,
+    "cap_bind_rate": 0.3874,
     "status": "red",
-    "derisk_mult": 0.4627,
-    "drawdown_pct": 21.0499
+    "derisk_mult": 0.5892,
+    "drawdown_pct": 17.977
   },
   "open_positions": [],
   "recent_resolved": [
+    {
+      "ts": "2026-09-21T16:51:31.155052+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.58,
+      "correct": true,
+      "pnl": 1.3895,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T16:16:20.949504+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.64,
+      "correct": true,
+      "pnl": 1.0746,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T15:52:20.609912+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.78,
+      "correct": true,
+      "pnl": 0.5333,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T15:06:31.335339+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.86,
+      "correct": true,
+      "pnl": 1.0524,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T14:42:14.783714+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.78,
+      "correct": true,
+      "pnl": 0.5333,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T14:38:00.468293+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.52,
+      "correct": true,
+      "pnl": 1.779,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T13:36:29.135466+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.88,
+      "correct": true,
+      "pnl": 0.6942,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T13:01:49.019959+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.66,
+      "correct": false,
+      "pnl": -2.0476,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T12:16:28.369969+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.53,
+      "correct": false,
+      "pnl": -2.0658,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T12:11:37.434016+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.88,
+      "correct": true,
+      "pnl": 0.8935,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T11:58:10.447464+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.71,
+      "correct": true,
+      "pnl": 0.7763,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T10:41:27.051460+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.85,
+      "correct": false,
+      "pnl": -2.021,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T09:52:18.827918+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.88,
+      "correct": true,
+      "pnl": 0.9139,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T08:46:35.889473+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.87,
+      "correct": true,
+      "pnl": 0.9385,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T07:07:08.843346+00:00",
+      "coin": "btc",
+      "side": "Up",
+      "entry": 0.8,
+      "correct": false,
+      "pnl": -2.028,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-21T01:33:00.442834+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.89,
+      "correct": true,
+      "pnl": 0.8416,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-20T17:47:36.915612+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.74,
+      "correct": true,
+      "pnl": 0.6663,
+      "note": ""
+    },
+    {
+      "ts": "2026-09-19T17:46:07.250763+00:00",
+      "coin": "btc",
+      "side": "Down",
+      "entry": 0.51,
+      "correct": null,
+      "pnl": 0.0,
+      "note": "void"
+    },
     {
       "ts": "2026-09-18T19:06:09.456343+00:00",
       "coin": "btc",
@@ -134,175 +296,13 @@
       "correct": true,
       "pnl": 0.8151,
       "note": ""
-    },
-    {
-      "ts": "2026-09-17T14:11:07.441881+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.56,
-      "correct": true,
-      "pnl": 1.5098,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-17T12:48:13.069999+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.62,
-      "correct": true,
-      "pnl": 1.1726,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-17T12:05:57.401556+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.71,
-      "correct": false,
-      "pnl": -2.0406,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-17T05:42:34.480500+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.89,
-      "correct": true,
-      "pnl": 0.5215,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T20:51:20.199599+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.77,
-      "correct": true,
-      "pnl": 0.5652,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T19:20:48.798638+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.8,
-      "correct": true,
-      "pnl": 0.472,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T18:41:09.871166+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.62,
-      "correct": true,
-      "pnl": 1.1726,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T18:21:21.899954+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.89,
-      "correct": true,
-      "pnl": 0.5215,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T17:56:10.067725+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.89,
-      "correct": true,
-      "pnl": 0.5215,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T15:32:37.448036+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.75,
-      "correct": true,
-      "pnl": 0.6317,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T12:17:51.934304+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.52,
-      "correct": true,
-      "pnl": 1.779,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T09:46:01.706736+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.79,
-      "correct": true,
-      "pnl": 0.5022,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-16T01:52:17.601722+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.85,
-      "correct": false,
-      "pnl": -2.021,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-15T23:01:00.559857+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.85,
-      "correct": false,
-      "pnl": -2.021,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-15T22:16:42.602458+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.9,
-      "correct": false,
-      "pnl": -4.5315,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-15T19:51:08.795629+00:00",
-      "coin": "btc",
-      "side": "Down",
-      "entry": 0.84,
-      "correct": true,
-      "pnl": 0.3586,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-15T19:26:08.927204+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.6,
-      "correct": false,
-      "pnl": -2.056,
-      "note": ""
-    },
-    {
-      "ts": "2026-09-15T17:56:14.739290+00:00",
-      "coin": "btc",
-      "side": "Up",
-      "entry": 0.88,
-      "correct": true,
-      "pnl": 0.5758,
-      "note": ""
     }
   ],
   "strategy_stats": {
     "stickiness": {
-      "n": 526,
-      "win_rate": 0.8593,
-      "total_pnl": 172.1162
+      "n": 536,
+      "win_rate": 0.8582,
+      "total_pnl": 164.0027
     },
     "cross_coin": {
       "n": 171,
@@ -310,9 +310,9 @@
       "total_pnl": -216.0137
     },
     "london": {
-      "n": 78,
-      "win_rate": 0.4231,
-      "total_pnl": -125.1128
+      "n": 79,
+      "win_rate": 0.4177,
+      "total_pnl": -135.2248
     },
     "near_certainty_arb": {
       "n": 0,
@@ -322,9 +322,9 @@
   },
   "coin_stats": {
     "btc": {
-      "n": 388,
-      "win_rate": 0.7784,
-      "total_pnl": -49.1824
+      "n": 405,
+      "win_rate": 0.7778,
+      "total_pnl": -45.2584
     },
     "eth": {
       "n": 44,
@@ -334,25 +334,133 @@
   },
   "eth_book": {
     "balance": {
-      "current": 99.0662,
-      "cash": 99.0662,
+      "current": 97.4418,
+      "cash": 97.4418,
       "deployed": 0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -50.9338,
-      "pnl_pct": -33.9559,
-      "drawdown_pct": 39.0442
+      "pnl_usd": -52.5582,
+      "pnl_pct": -35.0388,
+      "drawdown_pct": 40.0437
     },
     "trades": {
-      "total": 197,
-      "wins": 152,
-      "losses": 45,
-      "total_pnl": -50.9338,
-      "win_rate": 0.7716,
-      "avg_pnl": -0.2585
+      "total": 207,
+      "wins": 159,
+      "losses": 48,
+      "total_pnl": -52.5582,
+      "win_rate": 0.7681,
+      "avg_pnl": -0.2539
     },
     "open_positions": [],
     "recent_resolved": [
+      {
+        "ts": "2026-09-21T14:14:05.089771+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.62,
+        "correct": false,
+        "pnl": -2.0532,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T13:48:42.411119+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.86,
+        "correct": true,
+        "pnl": 0.6885,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T09:42:08.848795+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.71,
+        "correct": false,
+        "pnl": -2.0406,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T09:32:26.172377+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.87,
+        "correct": true,
+        "pnl": 0.6315,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T08:46:54.778364+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.9,
+        "correct": true,
+        "pnl": 0.4685,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T02:01:32.985641+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.52,
+        "correct": false,
+        "pnl": -2.0672,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-21T01:36:33.198105+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.87,
+        "correct": true,
+        "pnl": 0.6315,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-20T18:47:11.569248+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.92,
+        "correct": true,
+        "pnl": 0.3661,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-20T17:11:31.908325+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.8,
+        "correct": true,
+        "pnl": 1.062,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-20T03:26:52.202422+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.86,
+        "correct": true,
+        "pnl": 0.6885,
+        "note": ""
+      },
+      {
+        "ts": "2026-09-19T18:01:02.240960+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.51,
+        "correct": null,
+        "pnl": 0.0,
+        "note": "void"
+      },
+      {
+        "ts": "2026-09-19T17:46:19.999207+00:00",
+        "coin": "eth",
+        "side": "Down",
+        "entry": 0.51,
+        "correct": null,
+        "pnl": 0.0,
+        "note": "void"
+      },
       {
         "ts": "2026-09-19T03:11:34.897512+00:00",
         "coin": "eth",
@@ -513,114 +621,6 @@
         "entry": 0.93,
         "correct": true,
         "pnl": 0.3167,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T21:22:35.971761+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.67,
-        "correct": true,
-        "pnl": 0.9389,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T18:36:11.725332+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.87,
-        "correct": true,
-        "pnl": 0.6315,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T18:21:37.182480+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.79,
-        "correct": false,
-        "pnl": -2.0294,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T18:06:09.768331+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.72,
-        "correct": true,
-        "pnl": 0.7386,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T16:58:36.517819+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.86,
-        "correct": true,
-        "pnl": 0.6885,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-16T15:32:52.973076+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.92,
-        "correct": true,
-        "pnl": 0.3661,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T21:12:17.054240+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.89,
-        "correct": true,
-        "pnl": 0.5215,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T19:51:39.181500+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.79,
-        "correct": true,
-        "pnl": 0.5022,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T19:36:37.054694+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.81,
-        "correct": true,
-        "pnl": 0.9957,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T14:26:03.537938+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.89,
-        "correct": true,
-        "pnl": 0.5215,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T13:46:30.039350+00:00",
-        "coin": "eth",
-        "side": "Up",
-        "entry": 0.92,
-        "correct": true,
-        "pnl": 0.3661,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-15T05:21:44.835987+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.87,
-        "correct": true,
-        "pnl": 0.6315,
         "note": ""
       }
     ]
