@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T10:42:01.504051+00:00",
+  "generated_at": "2026-10-01T10:58:34.830867+00:00",
   "balance": {
     "current": 98.4597,
     "cash": 98.4597,
@@ -334,25 +334,34 @@
   },
   "eth_book": {
     "balance": {
-      "current": 90.9607,
-      "cash": 90.9607,
+      "current": 91.4972,
+      "cash": 91.4972,
       "deployed": 0,
       "starting": 150.0,
       "peak": 162.5215,
-      "pnl_usd": -59.0393,
-      "pnl_pct": -39.3595,
-      "drawdown_pct": 44.0316
+      "pnl_usd": -58.5028,
+      "pnl_pct": -39.0019,
+      "drawdown_pct": 43.7015
     },
     "trades": {
-      "total": 248,
-      "wins": 190,
+      "total": 249,
+      "wins": 191,
       "losses": 58,
-      "total_pnl": -59.0393,
-      "win_rate": 0.7661,
-      "avg_pnl": -0.2381
+      "total_pnl": -58.5028,
+      "win_rate": 0.7671,
+      "avg_pnl": -0.235
     },
     "open_positions": [],
     "recent_resolved": [
+      {
+        "ts": "2026-10-01T10:58:19.758393+00:00",
+        "coin": "eth",
+        "side": "Up",
+        "entry": 0.779,
+        "correct": true,
+        "pnl": 0.5365,
+        "note": ""
+      },
       {
         "ts": "2026-09-30T15:21:49.498772+00:00",
         "coin": "eth",
@@ -612,15 +621,6 @@
         "entry": 0.9,
         "correct": false,
         "pnl": -4.5315,
-        "note": ""
-      },
-      {
-        "ts": "2026-09-23T14:31:56.347178+00:00",
-        "coin": "eth",
-        "side": "Down",
-        "entry": 0.66,
-        "correct": true,
-        "pnl": 0.9827,
         "note": ""
       }
     ]
